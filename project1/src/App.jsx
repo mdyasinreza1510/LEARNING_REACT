@@ -155,12 +155,23 @@
 
 //................................COUNTER....................
 
-import Counter from './Mycomponent.jsx'
+// import Counter from './Mycomponent.jsx'
 
-function App(){
-    return(
-        <Counter></Counter>
+// function App(){
+//     return(
+//         <Counter></Counter>
 
-    );
-}
-export default App
+//     );
+// }
+// export default App
+
+
+//........................................ onChange event in react.........................................................
+
+//  import OnChange from './Mycomponent.jsx'
+//  function App(){
+//     return(
+//         <OnChange></OnChange>
+//     );
+//  }
+//  export default App
