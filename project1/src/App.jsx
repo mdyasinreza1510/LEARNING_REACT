@@ -7,6 +7,8 @@
 //   <br />
 //   <Card></Card>
 
+
+
 // </>
 
 
@@ -119,12 +121,46 @@
 //click event= an interaction when a user click on a specific elemnt it gives some responce
 // a callback to the click event
 
-import Profile from './Button2.jsx';
-import Button2 from './Button2.jsx'
-function App(){
-     return(
-         <Profile></Profile>
-     );
+// import Profile from './Button2.jsx';
+// import Button2 from './Button2.jsx'
+// function App(){
+//      return(
+//          <Profile></Profile>
+//      );
 
- }
-  export default App
+//  }
+//   export default App
+
+
+
+
+// ..............................REACT HOOKS........................................................
+//hooks are special functions that allow us to use state and other react features in functional components
+
+//useState is a hook that allows us to add state to functional components
+// useState() = A React hook that allows the creation of a stateful variable
+                // AND a setter function to update its value in the Virtual DOM.
+                // [name, setName]
+
+// import Mycomponent from './Mycomponent.jsx'
+// function App(){
+//     return(
+
+//         <Mycomponent></Mycomponent>
+//     );
+// }
+// export default App
+
+
+
+//................................COUNTER....................
+
+import Counter from './Mycomponent.jsx'
+
+function App(){
+    return(
+        <Counter></Counter>
+
+    );
+}
+export default App

@@ -83,3 +83,26 @@ img{
     width: 200px;
     border-radius: 50%;
 }
+
+
+/*  .............................................................counter..........................................*/
+
+.counter{
+    background-color: lightyellow;
+    height: 200px;
+    width: 200px;
+    border: 2px solid gray;
+    border-radius: 20px;
+    text-align: center;
+}
+.counter h1{
+    font-size: 3rem;
+    color: darkslategrey;
+}
+button{
+    border: 2px solid gray;
+    height: 30px;
+    width: 60px;
+    border-radius: 10px;
+   
+}
