@@ -175,3 +175,16 @@
 //     );
 //  }
 //  export default App
+
+//.............................................useEffect hook in react.............................................................color picker app ....................................
+
+
+import Colorpicker from './Colorpicker.jsx'
+
+function App(){
+     
+     return(
+           <Colorpicker></Colorpicker>
+     );
+}
+export default App
