@@ -179,12 +179,30 @@
 //.............................................useEffect hook in react.............................................................color picker app ....................................
 
 
-import Colorpicker from './Colorpicker.jsx'
+// import Colorpicker from './Colorpicker.jsx'
+
+// function App(){
+     
+//      return(
+//            <Colorpicker></Colorpicker>
+//      );
+// }
+// export default App
+
+
+
+
+
+
+
+
+//...........................................practice................................
+
+import Practice from './Practice.jsx'
 
 function App(){
-     
      return(
-           <Colorpicker></Colorpicker>
+           <Practice></Practice>
      );
 }
 export default App
