@@ -2,7 +2,7 @@
 //hooks use krne se hm directly virtual dom me changes kr skte h without using class component
 
 
-import React, { use, useState } from 'react';
+import React, { useState } from 'react';
 
 // function Mycomponent(){
 // //to use useState we need to call it and pass the initial value of the state variable
@@ -58,16 +58,44 @@ import React, { use, useState } from 'react';
 // function Counter(){
 // const[count, setCount]=useState(0);
 
-// const increase =() =>{
-//     setCount(count+1);
-// }
 
+// // const increase =() =>{
+// //     setCount(count+1);
+// // }
+
+// // const decrease =() =>{
+// //     setCount(count-1);
+// // }
+// // const reset = ()=>{
+// //     setCount(0);
+// // }
+
+
+// // this is how we can use updaterfunction
+
+
+// // updater function = A function passed as an argument to setState() usually
+// // ex. setYeark(arrow funciton)
+// // Allow for safe updates based on the previous state
+// // Used with multiple state updates and asynchronous functions
+// // Good practice to use updater functions
+
+// const increase =() =>{
+//     //so here we ppaas an arr.fun as argument
+//     setCount(count => count+1);
+//     setCount(count => count+1);
+//     //here we wrote this setter two times so that it increase by 2 if write it 3 times it will
+//     //increase by 3 and so on 
+// }
 // const decrease =() =>{
-//     setCount(count-1);
+//     setCount(count => count-1);
+//     setCount(count => count-1);
+//     setCount(count => count-1);
 // }
 // const reset = ()=>{
 //     setCount(0);
 // }
+
 
 
 
@@ -171,4 +199,57 @@ import React, { use, useState } from 'react';
 // }
 // export default onChange
 
+
+
+
+//.......................................................update objects in state....................................................................
+
+// function Objectupdate(){
+//     const [car, setCar]=useState({
+
+//                                  brand:"buggati",
+//                                  model:"chiron",
+//                                  year:2026
+//                                 });
+
+
+// //Purane object ki saari values copy kar do”
+// // Isliye spread operator (...) use hota hai
+// //jo old values hai unko dlt nhi krta like brand change kiyato model aur year old value hi rhengi dlr nhi hogi
+
+
+// function brandChange(event){
+// setCar({...car, brand:event.target.value});
+// }
+// //AGAR HM ...CAR NHI USE KRENGE TO JAISE HI HMVALUE CHANGE KRENGE 
+// //TO  BAKI VALUES DLT HOJAYENGE
+
+// //we can also use updaterfunction
+// //setCar(car =>({...car, brand:event.target.value});
+
+// function modelChange(event){
+//     setCar({ ...car, model:event.target.value});
+// }
+
+// function yearChange(event){
+//     setCar({...car, year:event.target.value});
+
+    
+// }
+
+
+//     return(
+//         <div>
+//             <p>Your Choice : <b>{car.brand} {car.model} of {car.year}</b></p>
+//             <input type="text" value={car.brand} onChange={brandChange}/>
+//             <br />
+//             <input type="text" value={car.model} onChange={modelChange} />
+//              <br />
+//             <input type="number" value={car.year} onChange={yearChange} />
+        
+//         </div>
+//     );
+
+// }
+// export default Objectupdate
 
