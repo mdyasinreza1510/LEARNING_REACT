@@ -131,3 +131,10 @@ button{
     width: 100%;
     height: 200px;
 }
+
+/* BACKGROUNDCOLOR SETTER */
+.BGCOLOR{
+    
+    height: 100px;
+    width: 200px
+}

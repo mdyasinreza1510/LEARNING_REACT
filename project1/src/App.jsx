@@ -193,18 +193,18 @@
 
 // ......................................................update objects in state......................................................
 
-import Objectupdate from './Mycomponent.jsx'
-function App(){
+// import Objectupdate from './Mycomponent.jsx'
+// function App(){
 
-     return(
+//      return(
 
-                    <Objectupdate/>
+//                     <Objectupdate/>
      
      
-               );
+//                );
 
-     }
-     export default App
+//      }
+//      export default App
 
 
 
@@ -215,11 +215,11 @@ function App(){
 
 //...........................................practice................................
 
-// import Practice from './Practice.jsx'
+import Practice from './Practice.jsx'
 
-// function App(){
-//      return(
-//            <Practice></Practice>
-//      );
-// }
-// export default App
+function App(){
+     return(
+           <Practice></Practice>
+     );
+}
+export default App

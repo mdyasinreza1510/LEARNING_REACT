@@ -20,8 +20,25 @@ const passhow=() => {
 }
 
 
+//background color change
+const [color, setbgcolor]=useState("#6FCF97");
+
+const red=()=>{
+setbgcolor("red")
+}
+const blue=()=>{
+setbgcolor("blue")
+}
+
+const green=()=>{
+setbgcolor("green")
+}
+
+
+
     return(
         <>
+        <h1>character Counter</h1>
         <div className="ch-count">
         <textarea onChange={countCharacter}></textarea>
         <p>number of character : {count}</p>
@@ -30,7 +47,7 @@ const passhow=() => {
 
 
         {/* Show/Hide Password */}
-
+        <h1>Password Visibility</h1>
         <div className="pass-visib">
             <input type={showpass ? "text" : "password"} />
             {/* yaha hmne phlse se hi type define kiya hai to hme bs toggle krna hai koi bhi onchange ki zarurat nhi hai */}
@@ -39,6 +56,17 @@ const passhow=() => {
             click krne pe passshow call hua waha se showpass toggle hua  */}
         </div>
       
+
+{/* Background Color Changer */}
+      <h1>Background Color Changer</h1>
+
+      <div className="BGCOLOR" style={{backgroundColor:color}}>
+        <p  style={{color: color}}>y</p>
+      </div>
+      <button onClick={red}>RED</button>
+      <button onClick={blue}>BLUE</button>
+      <button onClick={green}>GREEN</button>
+
         </>
        
     );
