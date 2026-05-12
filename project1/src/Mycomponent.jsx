@@ -257,37 +257,40 @@ import React, { useState } from 'react';
 
 //.............................................update array in state....................................................................
 
-function Arrayupdate(){
+// function Arrayupdate(){
     
-    const[foods,setFoods]=useState(["apple", "banana","orange"]);
+//     const[foods,setFoods]=useState(["apple", "banana","orange"]);
 
-const addfruit=() =>{
-    const newfruit=document.getElementById("addfruit").value;
-    document.getElementById("addfruit").value="";
-    setFoods([...foods,newfruit]);
-}
+// const addfruit=() =>{
+//     const newfruit=document.getElementById("addfruit").value;
+//     document.getElementById("addfruit").value="";
+//     setFoods([...foods,newfruit]);
+// }
 
-const removefruit=(index)=>{
-setFoods(foods.filter((_, i)=>i!==index));
-}
+// const removefruit=(index)=>{
+// setFoods(foods.filter((_, i)=>i!==index));
+// }
 
 
 
-    return (
-        <div>
-            <h1>ARRAY UPDATER</h1>
+//     return (
+//         <div>
+//             <h1>ARRAY UPDATER</h1>
 
-            <ul>
-                {/* yaha pe hmne map k zariya food ko track kiya aur ey me index ki value ko add krke print kiya ek ul me */}
-                {foods.map((food, index) => 
-                    <li onClick={()=>removefruit(index)} key={index}>{food}</li>
-                    // aur jab bhi hm koi fun k sath parameter ko pass krenge tb hme arrow ka use krna hai
-                )}
-            </ul>
-            <input id="addfruit" type="text" placeholder='enter fruit' />
-       <button onClick={addfruit}>Add Fruit</button>
-        </div>
-    );
-}
+//             <ul>
+//                 {/* yaha pe hmne map k zariya food ko track kiya aur ey me index ki value ko add krke print kiya ek ul me */}
+//                 {foods.map((food, index) => 
+//                     <li onClick={()=>removefruit(index)} key={index}>{food}</li>
+//                     // aur jab bhi hm koi fun k sath parameter ko pass krenge tb hme arrow ka use krna hai
+//                 )}
+//             </ul>
+//             <input id="addfruit" type="text" placeholder='enter fruit' />
+//        <button onClick={addfruit}>Add Fruit</button>
+//         </div>
+//     );
+// }
 
-export default Arrayupdate;
+// export default Arrayupdate;
+
+
+// 

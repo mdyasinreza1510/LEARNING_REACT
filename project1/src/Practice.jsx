@@ -36,6 +36,20 @@ setbgcolor("green")
 
 
 
+
+
+// gender selection
+const[gender,setgender]=useState();
+
+function male(){
+    setgender("MALE");
+}
+
+function female(){
+    setgender("FEMALE");
+}
+
+
     return(
         <>
         <h1>character Counter</h1>
@@ -66,6 +80,19 @@ setbgcolor("green")
       <button onClick={red}>RED</button>
       <button onClick={blue}>BLUE</button>
       <button onClick={green}>GREEN</button>
+
+
+
+{/* gender selection */}
+<div>
+    <h1>Select Your Gender</h1>
+    <input type="radio" name="gender" onChange={male}/>MALE
+    <br />
+     <input type="radio"  name="gender" onChange={female}/>FEMALE
+     <br />
+     <p>Your Selected Gender :<b>{gender}</b>
+     </p>
+</div>
 
         </>
        
