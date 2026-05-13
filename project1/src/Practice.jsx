@@ -50,6 +50,33 @@ function female(){
 }
 
 
+
+//HOBBIES SELECTOR...............
+
+const [hobbies, sethobbies]=useState([]);
+
+
+function selectedhobbies(event){
+    const value= event.target.value;
+    const checked=event.target.checked;
+
+    if (checked){
+        sethobbies([...hobbies, value]);
+    } 
+    
+    else 
+        {
+        // filter() new array banata hai
+      // Jo hobby unchecked hui usko remove kar do
+        sethobbies( hobbies.filter((hobby)=> hobby !==value));
+
+        }
+}
+
+
+
+
+
     return(
         <>
         <h1>character Counter</h1>
@@ -92,6 +119,44 @@ function female(){
      <br />
      <p>Your Selected Gender :<b>{gender}</b>
      </p>
+</div>
+
+
+
+{/*HOBBIES SELECTOR................................. */}
+
+
+<div>
+    <h1>Select Your Hobbies</h1>
+    <label>
+{/* jaise hi input ka value change hoga fir check hoga ki checked hai ya nahi
+ if yes then wo list me add hojayega */}
+    <input  onChange={selectedhobbies} type="checkbox" value="Gaming"/> Gaming
+    <input  onChange={selectedhobbies} type="checkbox" value="Fishing"/>Fishing 
+    <input  onChange={selectedhobbies} type="checkbox"  value="Coding"/>Coding 
+    <input  onChange={selectedhobbies} type="checkbox"  value="Esports"/>Esports 
+    <input  onChange={selectedhobbies} type="checkbox"  value="soccer"/>soccer 
+</label>
+    <h3>Your Hobbies are:</h3>
+    <ul>
+        {/* map() se hobbies show kar rahe hain 
+        aur hobby ya koi bhi para meter jo map me define hota hai wo 
+        array ka singl elemnthoota hai 
+        like gaming = 0
+        fishing=1 etc*/}
+
+
+        {hobbies.map((hobby,index) => (
+        <li key={index}>
+        {hobby}
+        </li>
+        ))}
+       
+    </ul>
+
+
+    
+   
 </div>
 
         </>

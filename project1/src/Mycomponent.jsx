@@ -294,63 +294,63 @@ import React, { useState } from 'react';
 
 
 // .......................................................................UPDATING ARRAY OF OBJECTS..............................................................
-function Arrayupdate(){
-    const [cars,setcars]=useState([]);
-    const [caryear, setcaryear]=useState();
-    const [carmake, setcarmake]=useState("");
-    const [carmodel, setcarmodel]=useState("");
-//now we make 5 fun o add car, remove car,caryear,carmake, carmodel;
+// function Arrayupdate(){
+//     const [cars,setcars]=useState([]);
+//     const [caryear, setcaryear]=useState();
+//     const [carmake, setcarmake]=useState("");
+//     const [carmodel, setcarmodel]=useState("");
+// //now we make 5 fun o add car, remove car,caryear,carmake, carmodel;
 
-function addcar(){
-   // yaha pe hmne ek newcar object banay as an array jisme uske property ko add kiya
-   // fir setcars ko use krke purani aur new values ko add kiya
-   //aur inouts ko reset kiya
-    const newcar={year:caryear,
-                  make:carmake,
-                  model:carmodel}
+// function addcar(){
+//    // yaha pe hmne ek newcar object banay as an array jisme uske property ko add kiya
+//    // fir setcars ko use krke purani aur new values ko add kiya
+//    //aur inouts ko reset kiya
+//     const newcar={year:caryear,
+//                   make:carmake,
+//                   model:carmodel}
 
-                  setcars([...cars, newcar]);
-                  setcaryear();
-                  setcarmake("")
-                  setcarmodel("")
+//                   setcars([...cars, newcar]);
+//                   setcaryear();
+//                   setcarmake("")
+//                   setcarmodel("")
 
-}
-function removecar(index){
-    setcars(cars.filter((_,i) => i!==index))
+// }
+// function removecar(index){
+//     setcars(cars.filter((_,i) => i!==index))
     
-}
-function Caryearchange(event){
-    setcaryear(event.target.value)
-}
-function Carmakechange(event){
-     setcarmake(event.target.value)
-}
-function Carmodelchange(event){
-     setcarmodel(event.target.value)
-}
+// }
+// function Caryearchange(event){
+//     setcaryear(event.target.value)
+// }
+// function Carmakechange(event){
+//      setcarmake(event.target.value)
+// }
+// function Carmodelchange(event){
+//      setcarmodel(event.target.value)
+// }
 
-    return(
-      <>
-      <div>
-        <h2>List of Car Objects</h2>
-        <ul>
-            {cars.map((car,index) =>
-            <li onClick={()=>{removecar(index)}} key={index}>
-                {car.year} {car.make} {car.model}
+//     return(
+//       <>
+//       <div>
+//         <h2>List of Car Objects</h2>
+//         <ul>
+//             {cars.map((car,index) =>
+//             <li onClick={()=>{removecar(index)}} key={index}>
+//                 {car.year} {car.make} {car.model}
 
-            </li>)}
+//             </li>)}
 
-        </ul>
+//         </ul>
 
-        <input type="number" placeholder='year'  value={caryear} onChange={Caryearchange}/>
-        <br />
-        <input type="text"  value={carmake} onChange={Carmakechange} placeholder='Car Made By'/>
-        <br />
-        <input type="text"  value={carmodel} onChange={Carmodelchange} placeholder='Model of the Car'/>
-        <button  onClick={addcar}>add car</button>
-      </div>
+//         <input type="number" placeholder='year'  value={caryear} onChange={Caryearchange}/>
+//         <br />
+//         <input type="text"  value={carmake} onChange={Carmakechange} placeholder='Car Made By'/>
+//         <br />
+//         <input type="text"  value={carmodel} onChange={Carmodelchange} placeholder='Model of the Car'/>
+//         <button  onClick={addcar}>add car</button>
+//       </div>
       
-      </>
-    );
-}
-export default Arrayupdate
+//       </>
+//     );
+// }
+// export default Arrayupdate

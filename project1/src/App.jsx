@@ -212,26 +212,26 @@
 
 //..............................................updating array in state.............................................................
 
-import Arrayupdate from './Mycomponent.jsx'
-function App(){
+// import Arrayupdate from './Mycomponent.jsx'
+// function App(){
 
-     return(
+//      return(
 
-                    <Arrayupdate></Arrayupdate>
+//                     <Arrayupdate></Arrayupdate>
      
      
-               );
+//                );
 
-          }
-          export default App
+//           }
+//           export default App
 
 //...........................................practice................................
 
-// import Practice from './Practice.jsx'
+import Practice from './Practice.jsx'
 
-// function App(){
-//      return(
-//            <Practice></Practice>
-//      );
-// }
-// export default App
+function App(){
+     return(
+           <Practice></Practice>
+     );
+}
+export default App
