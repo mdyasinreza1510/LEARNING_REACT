@@ -138,3 +138,12 @@ button{
     height: 100px;
     width: 200px
 }
+
+/* mode changer.................................................. */
+.lighttxt{
+    
+    color: white;
+}
+.darktxt{
+    color: black;
+}

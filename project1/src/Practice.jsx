@@ -107,14 +107,20 @@ const [mode,setmode]=useState("white");
 
 function changemode(){
     const btm=document.querySelector("#btn")
+    const bg=document.querySelector("#bg");
     if(mode=="white"){
         setmode("black");
-        btm.innerText="light"
+        btm.innerText="Switch to Light";
+        bg.classList.add("lighttxt")
+        bg.classList.remove("darktxt")
+       
 
     }
     else{
          setmode("white");
-          btm.innerText="dark"
+          btm.innerText="Switch to Dark"
+          bg.classList.add("darktxt")
+             bg.classList.remove("lighttxt")
     }
 
 
@@ -215,9 +221,15 @@ function changemode(){
 
 
 {/* ...........................................................light and dark mode................................................. */}
-      <div style={{backgroundColor:mode}}>
+      <div id='bg'  style={{backgroundColor:mode}}>
         <h1>MODE SWITCHING</h1>
-  <button id='btn' onClick={changemode}>dark</button>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias sit ad iure molestiae culpa minus neque consectetur, maiores eos exercitationem ut similique esse magnam dolorum porro atque aut, cum iste!
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure error culpa esse amet eum porro atque adipisci quaerat provident non necessitatibus accusamus natus, fugiat deleniti nemo voluptatibus sit vel ullam.
+            Laudantium, aliquam rem. Sed fugit cum ipsum! Quisquam aut voluptas ea voluptatum nesciunt. Obcaecati hic dignissimos laboriosam voluptates, qui reprehenderit maxime ducimus harum quisquam sequi quam earum accusamus consequatur veritatis?
+            Perspiciatis itaque expedita neque omnis sed natus eveniet veniam voluptates quibusdam amet vel dolore illum nesciunt aut corrupti labore illo esse consequatur ullam id repellat, incidunt voluptatem praesentium maiores? Obcaecati.
+            Quaerat pariatur at soluta voluptatum fugiat possimus omnis eveniet! Tenetur fugit necessitatibus eius quo id sint cumque, eos magnam incidunt sed dicta recusandae, mollitia iusto officia, non enim nihil illo.
+        </p>
+  <button id='btn' onClick={changemode}>Switch to Dark</button>
         
         </div>  
         
