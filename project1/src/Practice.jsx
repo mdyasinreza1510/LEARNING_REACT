@@ -73,8 +73,52 @@ function selectedhobbies(event){
         }
 }
 
+//controlled form.........................
+const [name,setname]=useState();
+const [email,setemail]=useState();
+const[submitname, setsubmitname]=useState();
+const[submitemail, setsubmitemail]=useState();
 
 
+function changename(event){
+    setname(event.target.value);
+}
+
+function changemail(event){
+setemail(event.target.value);
+
+}
+function submit(){
+    //yaha hmne submit me setsubmitname/email me ko name aur email
+    //  paas krenge jinme input k through values add honge fir ham
+    //  submit k through acces krlenge aur auto type p me nhi hoga
+setsubmitname(name);
+setsubmitemail(email);
+
+///yaha pe setsub k zariya submitname/email me name aur email k value ko add krdiya 
+//ab jab submitname/email e values hain to hm p m submitname/aur email hi paas krenge
+}
+
+
+
+
+//..................................dark and light mode..................................
+const [mode,setmode]=useState("white");
+
+function changemode(){
+    const btm=document.querySelector("#btn")
+    if(mode=="white"){
+        setmode("black");
+        btm.innerText="light"
+
+    }
+    else{
+         setmode("white");
+          btm.innerText="dark"
+    }
+
+
+}
 
 
     return(
@@ -153,12 +197,38 @@ function selectedhobbies(event){
         ))}
        
     </ul>
-
-
-    
-   
 </div>
 
+{/* controlled forms......................................... */}
+<div>
+
+<h1>Controlled Forms</h1>
+<input onChange={changename} type="text" placeholder='enter your name' />
+<br />
+<input onChange={changemail} id='emailform' type="email"placeholder='enter email' />
+<button onClick={submit} >Submit</button>
+<p>Name : <b>{submitname}</b></p>
+<p>Email : <b>{submitemail}</b></p>
+</div>
+
+
+
+
+{/* ...........................................................light and dark mode................................................. */}
+      <div style={{backgroundColor:mode}}>
+        <h1>MODE SWITCHING</h1>
+  <button id='btn' onClick={changemode}>dark</button>
+        
+        </div>  
+        
+        
+        
+        
+        
+        
+        
+        
+        
         </>
        
     );
