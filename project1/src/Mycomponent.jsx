@@ -3,7 +3,7 @@
 
 
 
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 
 // function Mycomponent(){
 // //to use useState we need to call it and pass the initial value of the state variable
@@ -293,6 +293,10 @@ import React, { useState } from 'react';
 // export default Arrayupdate;
 
 
+
+
+
+
 // .......................................................................UPDATING ARRAY OF OBJECTS..............................................................
 // function Arrayupdate(){
 //     const [cars,setcars]=useState([]);
@@ -354,3 +358,117 @@ import React, { useState } from 'react';
 //     );
 // }
 // export default Arrayupdate
+
+
+
+
+
+
+
+
+
+
+
+//..........................................................        USEEFFECT()         ............................
+
+
+
+/* useEffect() = React Hook that tells React DO SOME CODE WHEN (pick one):
+This component re-renders
+This component mounts
+The state of a value
+
+// useEffect(function, [dependencies])
+
+//1. useEffect(()=>{}),  we use this for every render
+
+
+//2. useEffect(()=> {}, []),  we use this for on the first render only
+
+
+// 3. useEffect(()=> {}, [value]) // Runs on mount + when value changes  "we use this for spwcific atate change"
+
+
+// USES
+// #1 Event Listeners
+// #2 DOM manipulation
+// #3 Subscriptions (real-time updates)
+// #4 Fetching Data from an API
+// #5 Clean up when a component unmounts*/
+
+
+// function Mycomp(){
+
+// // const [count, setcount]=useState(0);
+// // const [color,setcolor]=useState("red");
+
+// // //i will increase the count after every re-render
+// // useEffect(() => {
+
+// // document.title= `count:${count}  color: ${color}`
+
+// // },[count,color]/*"",[] "for one time render only 
+// // so here i havent mention the color in dependencies so the colorname in title remains same even after cnahging the color we need to add [,color] to apply on title...... mtlb jab jab dependencies ki value change hogi tb tb render bhi change hoga*/)
+
+// // function addcount(){
+// //     setcount(count+1);
+// // }
+
+
+// // function deccount(){
+// //     setcount(count-1);
+// // }
+
+
+// // function changecolor(){
+// //     setcolor(c => c==="red" ? "green" :"red")
+// // }
+
+
+
+
+
+
+
+// //.........2nd example..............
+
+
+// const [width,setwidth]=useState(window.innerWidth);
+// const [height,setheight]=useState(window.innerHeight);
+
+
+// useEffect(()=>{
+//     window.addEventListener("resize", resizing);
+
+//     return()=>{
+//           window.removeEventListener("resize", resizing)
+// }
+// },[])
+
+// function resizing(){
+//     setwidth(window.innerWidth);
+//     setheight(window.innerHeight)
+// }
+
+// }
+// return(
+// <>
+// {/* <h1 style={{color: color}}>count : {count}</h1>
+// <button  onClick={addcount}>add</button>
+// <button  onClick={deccount}>add</button>
+// <br />
+// <button onClick={changecolor}>change color</button> */}
+
+
+// {/* 2nd     example */}
+
+// <p>Window Width : {width}px</p>
+// <p>Window Height : {height}px</p>
+
+// </>
+// )
+
+// export default Mycomp  
+
+
+

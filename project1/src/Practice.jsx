@@ -229,7 +229,7 @@ function changemode(){
             Perspiciatis itaque expedita neque omnis sed natus eveniet veniam voluptates quibusdam amet vel dolore illum nesciunt aut corrupti labore illo esse consequatur ullam id repellat, incidunt voluptatem praesentium maiores? Obcaecati.
             Quaerat pariatur at soluta voluptatum fugiat possimus omnis eveniet! Tenetur fugit necessitatibus eius quo id sint cumque, eos magnam incidunt sed dicta recusandae, mollitia iusto officia, non enim nihil illo.
         </p>
-  <button id='btn' onClick={changemode}>Switch to Dark</button>
+  <button id='btn' onClick={changemode}>Switch to dark</button>
         
         </div>  
         

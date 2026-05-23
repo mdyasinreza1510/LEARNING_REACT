@@ -225,13 +225,38 @@
 //           }
 //           export default App
 
-//...........................................practice................................
 
-import Practice from './Practice.jsx'
 
+
+
+
+
+
+
+//........................................................useEffect()  .............................................
+
+import Mycomp from './Mycomponent.jsx'
 function App(){
+
      return(
-           <Practice></Practice>
+          <Mycomp/>
      );
 }
+
 export default App
+
+
+
+
+
+
+//...........................................practice................................
+
+// import Practice from './Practice.jsx'
+
+// function App(){
+//      return(
+//            <Practice></Practice>
+//      );
+// }
+// export default App
