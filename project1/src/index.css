@@ -111,7 +111,7 @@ button{
 
 /* .............................color picker......................................... */
 
-.color-picker{
+/* .color-picker{
     text-align: center;
     box-sizing: border-box;
     padding: 30px;
@@ -133,17 +133,31 @@ button{
 }
 
 /* BACKGROUNDCOLOR SETTER */
-.BGCOLOR{
+/* .BGCOLOR{
     
     height: 100px;
     width: 200px
 }
 
 /* mode changer.................................................. */
-.lighttxt{
+/* .lighttxt{
     
     color: white;
 }
 .darktxt{
     color: black;
+} */
+
+
+
+
+/* ..................................digital clock ............................................. */
+
+
+body{
+    background-image: url(assets/bag.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+   
+
 }

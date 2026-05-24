@@ -235,15 +235,37 @@
 
 //........................................................useEffect()  .............................................
 
-import Mycomp from './Mycomponent.jsx'
-function App(){
+// import Mycomp from './Mycomponent.jsx'
+// function App(){
 
+//      return(
+//           <Mycomp/>
+//      );
+// }
+
+// export default App
+
+
+
+
+
+
+
+
+//.......................................................DIGITAL CLOCK....................................................
+
+import DigitalClock from "./DigitalClock.jsx";
+function App(){
      return(
-          <Mycomp/>
+          <DigitalClock/>
      );
 }
-
 export default App
+
+
+
+
+
 
 
 
