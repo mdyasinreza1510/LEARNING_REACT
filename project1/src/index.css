@@ -155,9 +155,40 @@ button{
 
 
 body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: url(assets/bag.jpg);
     background-repeat:no-repeat;
     background-size: cover;
+    background-attachment: fixed; /*image adjust its size automatically*/
    
 
+}
+.blurbg{
+    height: 100vh;
+     width: 100%;
+     position: fixed;
+     inset: 0;
+     z-index: -1;
+     backdrop-filter: blur(5px);
+}
+.clock{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    
+}
+.clock-box{
+    height: 100px;
+    width: 100vw;
+    background: transparent;
+   
 }
