@@ -70,6 +70,11 @@
 
 
 // ..............................RENDERING LISTS................................  
+
+
+
+
+
 //arrayyyys
 
 
@@ -117,7 +122,19 @@
     
 
 
-// .............................EVENT HANDLING IN REACT.............................
+
+
+
+
+
+// .............................EVENT HANDLING IN REACT................................................................................
+
+
+
+
+
+
+
 //click event= an interaction when a user click on a specific elemnt it gives some responce
 // a callback to the click event
 
@@ -130,6 +147,11 @@
 
 //  }
 //   export default App
+
+
+
+
+
 
 
 
@@ -254,13 +276,41 @@
 
 //.......................................................DIGITAL CLOCK....................................................
 
-import DigitalClock from "./DigitalClock.jsx";
+// import DigitalClock from "./DigitalClock.jsx";
+// function App(){
+//      return(
+//           <DigitalClock/>
+//      );
+// }
+// export default App
+
+
+
+
+
+//........................................................USE CONTEXT()..............................................
+
+import ComponentA from "./ComponentA.jsx";
 function App(){
      return(
-          <DigitalClock/>
+          <ComponentA/>
      );
 }
 export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
