@@ -290,24 +290,34 @@
 
 //........................................................USE CONTEXT()..............................................
 
-import ComponentA from "./ComponentA.jsx";
+// import ComponentA from "./ComponentA.jsx";
+// function App(){
+//      return(
+//           <ComponentA/>
+//      );
+// }
+// export default App
+
+
+
+
+
+
+
+
+
+
+//.................................................................... USE REF()................................................................
+
+import UseRef from "./UseRef.jsx";
+
 function App(){
      return(
-          <ComponentA/>
+          <UseRef/>
      );
+
 }
 export default App
-
-
-
-
-
-
-
-
-
-
-
 
 
 
