@@ -7,11 +7,18 @@
     inputRef.current.focus();
   }
     in return
-    
+
     Ref connect kiya
     <input ref={inputRef} type="text" />
+..................
+Value change
+   ↓
+NO re-render
+ agar ui me change chaiye to Usestate use jrna chaiye 
+agar dom me change chaiye to Useref use jrna chaiye
+*/
 
- */
+
 import React ,{useState , useEffect, useRef } from 'react'
 
 
@@ -19,7 +26,9 @@ function UseRef(){
 
     // const [number, setnumber]=useState(0);  //by this method it wil render two time so we need to use useref
     
-const ref= useRef(0);
+const inputref1= useRef(null);
+const inputref2= useRef(null);
+const inputref3= useRef(null);
 
     useEffect(()=>{
         console.log("button clicked")
@@ -28,15 +37,41 @@ const ref= useRef(0);
     function handlenum(){
         // ref.current++;
         // console.log(ref.current);
+
+        inputref1.current.focus();
+        inputref1.current.style.backgroundColor="blue";
+    }
+
+    function click2(){
+        inputref2.current.focus();
+        inputref2.current.style.backgroundColor="red";
+        
+        inputref1.current.style.backgroundColor="";
+        inputref3.current.style.backgroundColor="";
+    
+    }
+        function click3(){
+        inputref3.current.focus();
+        inputref3.current.style.backgroundColor="pink";
+
+          inputref1.current.style.backgroundColor="";
+          inputref2.current.style.backgroundColor="";
     }
 
 
     return(<>
 <div>
     <h1>number :</h1>
-    <button onClick={handlenum}>increase</button>
+    <button onClick={handlenum}>click 1</button>
     <br />
-    <input type="text" />
+    <input ref={inputref1} /> <br />
+    <button onClick={click2}>click 2</button>
+    <br />
+      <input ref={inputref2} /> <br />
+    <button onClick={click3}>click 3</button>
+    <br />
+        <input ref={inputref3} />
+    
 </div>
     </>);
 
