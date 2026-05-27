@@ -16,6 +16,9 @@ Value change
 NO re-render
  agar ui me change chaiye to Usestate use jrna chaiye 
 agar dom me change chaiye to Useref use jrna chaiye
+
+
+koi bhi operation krne pe page dubara rendr nhi hoga bs values store honge
 */
 
 
@@ -40,6 +43,9 @@ const inputref3= useRef(null);
 
         inputref1.current.focus();
         inputref1.current.style.backgroundColor="blue";
+
+        inputref2.current.style.backgroundColor="";
+        inputref3.current.style.backgroundColor="";
     }
 
     function click2(){
