@@ -6,23 +6,46 @@ function Stopwatch(){
     const[elapsedtime, setelapsedtime]=useState(0);
     const intervalid=useRef(null);
     const starttime=useRef(0);
+useEffect(() => {
 
-useEffect(()=>{
+    if(isrunning){
 
-},[isrunning]);
+        intervalid.current = setInterval(() => {
+
+            setelapsedtime(
+                Date.now() - starttime.current
+            );
+
+        }, 10);
+    }
+
+    return () => {
+
+        clearInterval(intervalid.current);
+
+    };
+
+}, [isrunning]);
 
 function start(){
 setisrunning(true);
+starttime.current=Date.now() -elapsedtime;
+// console.log(starttime.current);
      
 }
 function stop(){
     setisrunning(false);
 }
 function reset(){
-    
+    setelapsedtime(0);
+    setisrunning(false);
 }
 function format(){
-    return `00 : 00 : 00`;
+    const hour=Math.floor(elapsedtime/(1000*60*60));
+    const minutes=Math.floor((elapsedtime/(1000*60))%60);
+        const second=Math.floor((elapsedtime/1000)%60);
+            const ms=Math.floor((elapsedtime %1000 )/10);
+    return `${minutes} : ${second} : ${ms}`;
 }
 
 return(
