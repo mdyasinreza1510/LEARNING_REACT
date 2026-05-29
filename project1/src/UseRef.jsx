@@ -42,7 +42,7 @@ const inputref3= useRef(null);
         // console.log(ref.current);
 
         inputref1.current.focus();
-        inputref1.current.style.backgroundColor="blue";
+        inputref1.current.style.backgroundColor="red";
 
         inputref2.current.style.backgroundColor="";
         inputref3.current.style.backgroundColor="";
@@ -50,24 +50,35 @@ const inputref3= useRef(null);
 
     function click2(){
         inputref2.current.focus();
-        inputref2.current.style.backgroundColor="red";
-        
+        inputref2.current.style.backgroundColor="green";
         inputref1.current.style.backgroundColor="";
         inputref3.current.style.backgroundColor="";
     
     }
         function click3(){
         inputref3.current.focus();
-        inputref3.current.style.backgroundColor="pink";
+        inputref3.current.style.backgroundColor="blue";
 
           inputref1.current.style.backgroundColor="";
           inputref2.current.style.backgroundColor="";
     }
 
 
+
+// Q1..................AUTO FOCUS INPUT......................
+
+const autofocusref=useRef(null);
+
+useEffect(()=> {
+     autofocusref.current.focus();
+     console.log("focused");
+},[])
+// function focus(){
+//     autofocusref.current.focus();
+// }
+
     return(<>
 <div>
-    <h1>number :</h1>
     <button onClick={handlenum}>click 1</button>
     <br />
     <input ref={inputref1} /> <br />
@@ -79,6 +90,14 @@ const inputref3= useRef(null);
         <input ref={inputref3} />
     
 </div>
+
+
+{/*Q1     AUTO FOCUS INPUT           */}
+<div>
+    <h1>AUTO FOCUS INPUT</h1>
+    <input ref={autofocusref} />
+</div>
+
     </>);
 
 }

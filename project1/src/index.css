@@ -211,7 +211,7 @@ body{
 
 /* .............................................................................STOPWATCH............................................ */
 
-body{
+/* body{
     font-family: monospace;
     margin: 0;
     padding: 0;
@@ -224,10 +224,11 @@ body{
     align-items: center;
 }
 .stopwatch{
-    /* background-color: blue; */
+ background-color: blue;
     height: 200px;
     width: 700px;
 }
+
 .display{
     color: #D3DAD9;
     display: flex;
@@ -237,9 +238,10 @@ body{
     box-sizing: border-box;
     padding: 10px;
     font-size: 100px;
-    /* background-color: red; */
+
     height: 100px;
 }
+
 .control{
     margin-top: 40px;
     box-sizing: border-box;
@@ -247,17 +249,19 @@ body{
     display: flex;
     align-items: center;
     justify-content:space-evenly;
-    /* background-color: pink; */
+ 
     height: 50px;
 }
+
 .control button{
     background-color: #D3DAD9;
     color: #202940;
     font-size: 20px;
     text-align: center;
-    
+
     height: 100%;
     width: 90px;
     border: none;
     border-radius: 25px;
-}
+} 
+*/
