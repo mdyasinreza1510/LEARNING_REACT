@@ -41,10 +41,15 @@ function reset(){
     setisrunning(false);
 }
 function format(){
-    const hour=Math.floor(elapsedtime/(1000*60*60));
-    const minutes=Math.floor((elapsedtime/(1000*60))%60);
-        const second=Math.floor((elapsedtime/1000)%60);
-            const ms=Math.floor((elapsedtime %1000 )/10);
+let hour=Math.floor(elapsedtime/(1000*60*60));
+let minutes=Math.floor((elapsedtime/(1000*60))%60);
+let second=Math.floor((elapsedtime/1000)%60);
+let ms=Math.floor((elapsedtime %1000 )/10);
+
+hour=String(hour).padStart(2,"0");
+minutes=String(minutes).padStart(2,"0");
+second=String(second).padStart(2,"0");
+ms=String(ms).padStart(2,"0");
     return `${minutes} : ${second} : ${ms}`;
 }
 
