@@ -203,7 +203,61 @@ body{
 
 /* .................................................................... USECONTEXT()...................................................... */
 
-.box{
+/* .box{
  border: 2px solid blue;
  padding: 25px;
+} */
+
+
+/* .............................................................................STOPWATCH............................................ */
+
+body{
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stopwatch{
+    /* background-color: blue; */
+    height: 200px;
+    width: 700px;
+}
+.display{
+    color: #D3DAD9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 100px;
+    /* background-color: red; */
+    height: 100px;
+}
+.control{
+    margin-top: 40px;
+    box-sizing: border-box;
+    padding: 0px 50px 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    /* background-color: pink; */
+    height: 50px;
+}
+.control button{
+    background-color: #D3DAD9;
+    color: #202940;
+    font-size: 20px;
+    text-align: center;
+    
+    height: 100%;
+    width: 90px;
+    border: none;
+    border-radius: 25px;
 }
