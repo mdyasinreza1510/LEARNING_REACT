@@ -100,6 +100,37 @@ useEffect(()=>{
 },[count])
 
 
+
+
+//Q5..........................CHANGE INPUT BORDER USING REF..............
+
+const colorref=useRef();
+
+function red(){
+    colorref.current.style.border="5px solid red";
+     colorref.current.placeholder="LAL BORDER";
+}
+function green(){
+    colorref.current.style.border="5px solid green";
+     colorref.current.placeholder="HARA BORDER";
+}
+function blue(){
+    colorref.current.style.border="5px solid blue";
+    colorref.current.placeholder="NELA BORDER";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
     return(<>
 <div>
     <button onClick={handlenum}>click 1</button>
@@ -115,17 +146,29 @@ useEffect(()=>{
 </div>
 
 
-{/*Q1     AUTO FOCUS INPUT           */}
+{/*Q1 .........................AUTO FOCUS INPUT..................... */}
 <div>
     <h1>AUTO FOCUS INPUT</h1>
     <input ref={autofocusref} />
 </div>
 
+
+
+
+
+
+
 {/* .................................... BUTTON CLICK COUNTER........ */}
+
+
 <div>
     <h1> BUTTON CLICK COUNTER</h1>
     <button onClick={inc}> click to increase in console</button>
 </div>
+
+
+
+
 
 
 {/* ..................................PREVIOUS VALUE TRACKER..........*/}
@@ -135,6 +178,22 @@ useEffect(()=>{
     <h3>current count : {count}</h3>
     <h3>previous count : {preref.current}</h3>
     <button onClick={addcount}>increase</button>
+</div>
+
+
+
+
+
+
+
+
+{/* ...............................CHANGE INPUT BORDER USING REF..... */}
+<div>
+    <h1>CHANGE INPUT BORDER USING REF</h1>
+    <input ref={colorref}  placeholder='color changing input' /> <br />
+    <button onClick={red}> LAL</button>
+    <button onClick={green}> HARA</button>
+    <button onClick={blue}> NEELA</button>
 </div>
     </>);
 
