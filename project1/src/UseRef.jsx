@@ -77,6 +77,21 @@ useEffect(()=> {
 //     autofocusref.current.focus();
 // }
 
+
+
+//Q2....................... BUTTON CLICK COUNTER............
+
+const countref=useRef(0);
+function inc(){
+    countref.current++;
+    console.log(countref.current);
+}
+
+
+
+
+
+
     return(<>
 <div>
     <button onClick={handlenum}>click 1</button>
@@ -97,6 +112,14 @@ useEffect(()=> {
     <h1>AUTO FOCUS INPUT</h1>
     <input ref={autofocusref} />
 </div>
+
+{/* .................................... BUTTON CLICK COUNTER........ */}
+<div>
+    <h1> BUTTON CLICK COUNTER</h1>
+    <button onClick={inc}> click to increase</button>
+</div>
+
+
 
     </>);
 
