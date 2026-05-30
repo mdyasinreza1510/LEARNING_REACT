@@ -87,9 +87,17 @@ function inc(){
     console.log(countref.current);
 }
 
+//q3.......................PREVIOUS VALUE TRACKER......................
 
+const [count ,setcount]=useState(0);
 
-
+function addcount(){
+    setcount(count+1);
+}
+const preref=useRef(0);
+useEffect(()=>{
+    preref.current = count;
+},[count])
 
 
     return(<>
@@ -116,11 +124,18 @@ function inc(){
 {/* .................................... BUTTON CLICK COUNTER........ */}
 <div>
     <h1> BUTTON CLICK COUNTER</h1>
-    <button onClick={inc}> click to increase</button>
+    <button onClick={inc}> click to increase in console</button>
 </div>
 
 
+{/* ..................................PREVIOUS VALUE TRACKER..........*/}
 
+<div>
+    <h1>PREVIOUS VALUE TRACKER</h1>
+    <h3>current count : {count}</h3>
+    <h3>previous count : {preref.current}</h3>
+    <button onClick={addcount}>increase</button>
+</div>
     </>);
 
 }
