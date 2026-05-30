@@ -123,8 +123,30 @@ function blue(){
 
 
 
+//Q6.......................SCROLL TO SECTION.............................
 
+const secref1=useRef();
+const secref2=useRef();
+const secref3=useRef();
 
+function sec1(){
+    secref1.current.scrollIntoView()
+    secref1.current.innerText="youre in section 1";
+    secref2.current.innerText=" ";
+    secref3.current.innerText=" ";
+}
+function sec2(){
+    secref2.current.scrollIntoView()
+    secref2.current.innerText="youre in section 2";
+    secref1.current.innerText=" ";
+    secref3.current.innerText=" ";
+}
+function sec3(){
+    secref3.current.scrollIntoView()
+    secref3.current.innerText="youre in section 3";
+    secref1.current.innerText=" ";
+    secref2.current.innerText=" ";
+}
 
 
 
@@ -195,6 +217,24 @@ function blue(){
     <button onClick={green}> HARA</button>
     <button onClick={blue}> NEELA</button>
 </div>
+
+
+
+
+
+{/* .............................SCROLL TO SECTION................... */}
+
+
+<h1>SCROLL TO SECTION</h1>
+<button onClick={sec1}>sec1</button>
+<button onClick={sec2}>sec2</button>
+<button onClick={sec3}>sec3</button>
+<div className='sec' ref={secref1}>section 1</div>
+<div className='sec' ref={secref2}>section 2</div>
+<div className='sec' ref={secref3}>section 3</div>
+
+
+
     </>);
 
 }
