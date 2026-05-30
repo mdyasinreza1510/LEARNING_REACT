@@ -152,6 +152,18 @@ function sec3(){
 
 
 
+//Q7........................INPUT VALUE ACCESS WITHOUT onChange..........
+
+const inpref=useRef();
+
+function inputshow(){
+    alert(inpref.current.value);
+    inpref.current.value=" "
+}
+
+
+
+
 
     return(<>
 <div>
@@ -232,6 +244,21 @@ function sec3(){
 <div className='sec' ref={secref1}>section 1</div>
 <div className='sec' ref={secref2}>section 2</div>
 <div className='sec' ref={secref3}>section 3</div>
+
+
+
+
+
+
+
+{/* ......................INPUT VALUE ACCESS WITHOUT onChange........ */}
+
+<div>
+    <h1>INPUT VALUE ACCESS WITHOUT onChange</h1>
+    <input  ref={inpref} type="text" />
+    <button onClick={inputshow}> click to print</button>
+
+</div>
 
 
 
