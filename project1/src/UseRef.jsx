@@ -23,7 +23,7 @@ koi bhi operation krne pe page dubara rendr nhi hoga bs values store honge
 
 
 import React ,{useState , useEffect, useRef } from 'react'
-
+import video from "./assets/Video-551.mp4"
 
 function UseRef(){
 
@@ -160,9 +160,20 @@ function inputshow(){
     alert(inpref.current.value);
     inpref.current.value=" "
 }
+ 
 
 
+//..........................VIDEO CONTROL APP............................
 
+const videoref=useRef();
+
+
+function play(){
+    videoref.current.play();
+}
+function pause(){
+    videoref.current.pause();
+}
 
 
     return(<>
@@ -261,6 +272,18 @@ function inputshow(){
 </div>
 
 
+
+
+
+
+{/* ......................VIDEO CONTROL APP.......................... */}
+<div>
+    <h1>VIDEO CONTROL APP</h1>
+    <video ref={videoref} className='myvideo' src={video}></video>
+    <br />
+    <button onClick={play}>play</button>
+    <button onClick={pause}>pause</button>
+    </div>
 
     </>);
 
