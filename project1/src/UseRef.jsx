@@ -163,7 +163,7 @@ function inputshow(){
  
 
 
-//..........................VIDEO CONTROL APP............................
+//Q8........................VIDEO CONTROL  APP............................
 
 const videoref=useRef();
 
@@ -175,6 +175,24 @@ function pause(){
     videoref.current.pause();
 }
 
+
+
+
+//............................TIMER ID STORAGE.....................................
+
+const timeref=useRef();
+
+
+function start(){
+    timeref.current = setInterval(() => {
+       console.log("running..")
+        
+    }, 1000);
+}
+
+function stop(){
+    clearInterval(timeref.current);
+}
 
     return(<>
 <div>
@@ -284,6 +302,22 @@ function pause(){
     <button onClick={play}>play</button>
     <button onClick={pause}>pause</button>
     </div>
+
+
+
+
+
+
+{/* //............................TIMER ID STORAGE..................................... */}
+
+<div>
+    <h1>TIMER ID STORAGE</h1>
+    <h3>count : {count}</h3>
+    <button onClick={start}>start</button>
+    <button onClick={stop}>stop</button>
+
+</div>
+
 
     </>);
 
