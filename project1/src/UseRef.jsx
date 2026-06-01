@@ -22,7 +22,7 @@ koi bhi operation krne pe page dubara rendr nhi hoga bs values store honge
 */
 
 
-import React ,{useState , useEffect, useRef } from 'react'
+import React ,{ useState, useEffect, useRef } from 'react'
 import video from "./assets/Video-551.mp4"
 
 function UseRef(){
@@ -180,14 +180,16 @@ function pause(){
 
 //............................TIMER ID STORAGE.....................................
 
+const [cnt,setcnt]=useState(0);
 const timeref=useRef();
 
 
 function start(){
     timeref.current = setInterval(() => {
-       console.log("running..")
+      setcnt(c=> c+1);
         
     }, 1000);
+    //har ek second me c ki vaue ko +1 krega
 }
 
 function stop(){
@@ -312,7 +314,7 @@ function stop(){
 
 <div>
     <h1>TIMER ID STORAGE</h1>
-    <h3>count : {count}</h3>
+    <h3>count : {cnt}</h3>
     <button onClick={start}>start</button>
     <button onClick={stop}>stop</button>
 
