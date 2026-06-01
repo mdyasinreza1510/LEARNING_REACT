@@ -196,6 +196,21 @@ function stop(){
     clearInterval(timeref.current);
 }
 
+
+
+
+
+
+
+//................................... CHARACTER COUNT WITHOUT RE-RENDER.............................
+
+const contref=useRef(0);
+function countinput(){
+    contref.current++;
+    console.log(contref.current);
+}
+
+
     return(<>
 <div>
     <button onClick={handlenum}>click 1</button>
@@ -320,6 +335,18 @@ function stop(){
 
 </div>
 
+
+
+
+
+{/* ........................... CHARACTER COUNT WITHOUT RE-RENDER........................ */}
+
+<div> 
+    <h1>CHARACTER COUNT WITHOUT RE-RENDER</h1>
+    <input placeholder='type any text' onChange={countinput}/><br />
+    
+    
+    </div>
 
     </>);
 
